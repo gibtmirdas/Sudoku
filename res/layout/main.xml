@@ -3,11 +3,26 @@
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
-        >
-    <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Hello World, MainActivity"
-            />
+			  android:background="@drawable/background">
+	<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:text="@string/app_name"
+			android:id="@+id/Title" android:layout_gravity="center_horizontal" android:textSize="50dp"
+			android:layout_marginBottom="30dp" android:layout_marginTop="20dp" android:password="false"
+			android:textColor="#000000"/>
+	<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/start"
+			android:id="@+id/ButtStart" android:layout_gravity="center_horizontal"
+			android:background="@drawable/btn_normal" android:textStyle="bold" android:textSize="30dp"
+			android:layout_marginBottom="30dp"/>
+	<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/highScore"
+			android:id="@+id/ButtHighScore" android:layout_gravity="center_horizontal"
+			android:background="@drawable/btn_normal" android:textStyle="bold" android:textSize="30dp"/>
 </LinearLayout>
-

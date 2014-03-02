@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Sudoku</string>
+
+	<!-- SudokuActivity -->
+	<string name="app_name">Sudoku</string>
+	<string name="start">Start</string>
+	<string name="highScore">High Score</string>
+
+	<!-- menu -->
+	<string name="about">About</string>
+	<string name="difficulty">Difficulty</string>
+	<string name="easy">Easy</string>
+	<string name="medium">Medium</string>
+	<string name="hard">Hard</string>
+
 </resources>
