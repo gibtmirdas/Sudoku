@@ -13,4 +13,8 @@
 	<string name="medium">Medium</string>
 	<string name="hard">Hard</string>
 
+	<!-- menugame -->
+	<string name="pause">Pause game</string>
+	<string name="unpause">Unpause game</string>
+
 </resources>

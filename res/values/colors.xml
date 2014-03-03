@@ -5,4 +5,6 @@
 	<color name="dark">#6456648f</color>
 	<color name="foreground">#ff000000</color>
 	<color name="selected">#64ff8000</color>
+	<color name="newInput">#ff1C691F</color>
+	<color name="selection">#64309BF2</color>
 </resources>

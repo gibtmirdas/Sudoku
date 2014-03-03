@@ -7,6 +7,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.widget.NumberPicker;
 
 /**
@@ -16,6 +18,8 @@ public class SudokuPlay extends Activity {
 
 	private SudokuGrid grid;
 	private SudokuView view;
+	private Menu m;
+
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.sudoku);
@@ -24,7 +28,7 @@ public class SudokuPlay extends Activity {
 
 		Intent i = getIntent();
 		int difficulty = i.getIntExtra("difficulty", 0);
-		Log.d("Difficulty", "" + difficulty);
+		Log.d("LogCat", "Difficulty : " + difficulty);
 
 		grid = new SudokuGrid(difficulty);
 		view.setGrid(grid);
@@ -36,7 +40,7 @@ public class SudokuPlay extends Activity {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		final NumberPicker picker = new NumberPicker(builder.getContext());
 		picker.setDescendantFocusability(NumberPicker.FOCUS_BLOCK_DESCENDANTS);
-		picker.setMinValue(0);
+		picker.setMinValue(1);
 		picker.setMaxValue(9);
 
 		// 2. Chain together various setter methods to set the dialog characteristics
@@ -50,7 +54,7 @@ public class SudokuPlay extends Activity {
 		}).setNegativeButton("Cancel", new DialogInterface.OnClickListener(){
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
-				setPickedValue(-1);
+				setPickedValue(0);
 			}
 		});
 
@@ -61,5 +65,14 @@ public class SudokuPlay extends Activity {
 
 	private void setPickedValue(int i){
 		view.setPickedValue(i);
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu)
+	{
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.menugame, menu);
+		m = menu;
+		return true;
 	}
 }
