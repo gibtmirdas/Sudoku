@@ -5,10 +5,13 @@ import android.app.AlertDialog;
 import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.os.Message;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.NumberPicker;
 
 /**
@@ -19,8 +22,11 @@ public class SudokuPlay extends Activity {
 	private SudokuGrid grid;
 	private SudokuView view;
 	private Menu m;
+    private ChronoHandler handler;
+    private Bundle msgB;
+    private Message msg;
 
-	public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.sudoku);
 
@@ -33,6 +39,13 @@ public class SudokuPlay extends Activity {
 		grid = new SudokuGrid(difficulty);
 		view.setGrid(grid);
 		view.setPlay(this);
+        handler = new ChronoHandler();
+        msgB = new Bundle();
+
+        msgB.putBoolean("pause", false);
+        msg = new Message();
+        msg.setData(msgB);
+        handler.handleMessage(msg);
 	}
 
 	public void launchDialogue(){
@@ -75,4 +88,45 @@ public class SudokuPlay extends Activity {
 		m = menu;
 		return true;
 	}
+
+    @Override
+    public boolean onOptionsItemSelected (MenuItem item)
+    {
+        switch(item.getItemId())
+        {
+            // Game paused
+            case R.id.pause:
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
+                dialogPause();
+                //msgB.clear();
+                msgB.putBoolean("pause", true);
+                msg.setData(msgB);
+                Log.d("LogCat", "MSG created");
+                handler.handleMessage(msg);
+                Log.d("LogCat", "MSG sended");
+                view.setPaused(true);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void dialogPause(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Game paused\nCurrent tim :"+handler.getTotal()+"s");
+        builder.setTitle("Pause");
+        builder.setPositiveButton("Unpause",new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                msgB.clear();
+                msgB.putBoolean("pause", false);
+                msg.setData(msgB);
+                handler.handleMessage(msg);
+                view.setPaused(false);
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
+            }
+        });
+        AlertDialog dial = builder.create();
+        dial.setCancelable(false);
+        dial.show();
+    }
 }
