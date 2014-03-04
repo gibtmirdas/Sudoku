@@ -5,6 +5,9 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 /**
  * Created by thomas on 04/03/14.
  */
@@ -40,6 +43,24 @@ public class ScoreDB {
     public SQLiteDatabase getBDD(){
         return bdd;
     }
+
+	public ArrayList<HashMap<String, String>> getAllScores(){
+		Cursor c = bdd.query(TABLE_SCORE, new String[]{COL_ID, COL_SCORE, COL_USERNAME}, null, null, null, null, COL_SCORE + " DESC");
+		ArrayList<HashMap<String, String>> listItems = new ArrayList<HashMap<String, String>>();
+		HashMap<String, String> map ;
+		c.moveToFirst();
+		do{
+			HighScore hs = new HighScore();
+			hs.setId(c.getInt(NUM_COL_ID));
+			hs.setScore(c.getInt(NUM_COL_SCORE));
+			hs.setUserName(c.getString(NUM_COL_USERNAME));
+			map = new HashMap<String, String>();
+			map.put("username", hs.getUserName());
+			map.put("score", ""+hs.getScore());
+			listItems.add(map);
+		}while(c.moveToNext());
+		return listItems;
+	}
 
     public long insertScore(HighScore hs){
         ContentValues values = new ContentValues();

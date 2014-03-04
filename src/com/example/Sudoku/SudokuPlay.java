@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.EditText;
 import android.widget.NumberPicker;
 
 /**
@@ -112,8 +113,8 @@ public class SudokuPlay extends Activity {
 
     private void dialogPause(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Game paused\nCurrent tim :"+handler.getTotal()+"s");
-        builder.setTitle("Pause");
+		builder.setTitle("Pause");
+        builder.setMessage("Game paused\nCurrent time:" + handler.getTotal() + "s");
         builder.setPositiveButton("Unpause",new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -129,4 +130,32 @@ public class SudokuPlay extends Activity {
         dial.setCancelable(false);
         dial.show();
     }
+
+	private void gameWon(){
+
+		// TODO when game won => prompt alert and ask user to set username for highScore
+		String username;
+		float time;
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setTitle("Win !");
+		builder.setMessage("You won the game\nCurrent time:" + handler.getTotal()+ "s");
+		
+		final EditText input = new EditText(this);
+		builder.setView(input);
+
+		builder.setPositiveButton("Unpause",new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				msgB.clear();
+				msgB.putBoolean("pause", false);
+				msg.setData(msgB);
+				handler.handleMessage(msg);
+				view.setPaused(false);
+				setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
+			}
+		});
+		AlertDialog dial = builder.create();
+		dial.setCancelable(false);
+		dial.show();
+	}
 }

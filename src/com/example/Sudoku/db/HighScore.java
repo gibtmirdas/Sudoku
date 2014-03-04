@@ -6,10 +6,10 @@ package com.example.Sudoku.db;
 public class HighScore {
 
     private int id;
-    private int score;
+    private float score;
     private String userName;
 
-    public HighScore(int score, String userName) {
+    public HighScore(float score, String userName) {
         this.score = score;
         this.userName = userName;
     }
@@ -17,7 +17,7 @@ public class HighScore {
     public HighScore() {
     }
 
-    public int getId() {
+    public float getId() {
         return id;
     }
 
@@ -25,11 +25,11 @@ public class HighScore {
         this.id = id;
     }
 
-    public int getScore() {
+    public float getScore() {
         return score;
     }
 
-    public void setScore(int score) {
+    public void setScore(float score) {
         this.score = score;
     }
 

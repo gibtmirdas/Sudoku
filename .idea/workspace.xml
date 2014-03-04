@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidDataSourceStorage">
+    <data-sources>
+      <data-source>
+        <classpath-elements>
+          <url>file://$USER_HOME$/.IntelliJIdea13/config/jdbc-drivers/sqlite-jdbc-3.7.6.3-20110609.081603-3.jar</url>
+        </classpath-elements>
+        <classpath-elements>
+          <url>file://$USER_HOME$/.IntelliJIdea13/config/jdbc-drivers/xerial-sqlite-license.txt</url>
+        </classpath-elements>
+        <option name="databaseName" value="table_scores" />
+        <option name="deviceId" value="SERIAL_NUMBER_12400988115" />
+        <option name="name" value="Android SQLite" />
+        <option name="packageName" value="com.example.Sudoku" />
+      </data-source>
+    </data-sources>
+  </component>
   <component name="AndroidLayoutPreviewToolWindow">
     <option name="state">
       <GlobalState />
@@ -11,20 +27,19 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="logcat" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="LogCat" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e875fc1-37b0-4403-ae48-3e19a4424d36" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/Sudoku/db/DatabaseHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/Sudoku/db/HighScore.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/Sudoku/db/ScoreDB.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/example/Sudoku/ScoreView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/score.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/Sudoku/ChronoHandler.java" afterPath="$PROJECT_DIR$/src/com/example/Sudoku/ChronoHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/scoreitem.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/Sudoku/db/DatabaseHandler.java" afterPath="$PROJECT_DIR$/src/com/example/Sudoku/db/DatabaseHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/Sudoku/db/HighScore.java" afterPath="$PROJECT_DIR$/src/com/example/Sudoku/db/HighScore.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/Sudoku/db/ScoreDB.java" afterPath="$PROJECT_DIR$/src/com/example/Sudoku/db/ScoreDB.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/Sudoku/ScoreView.java" afterPath="$PROJECT_DIR$/src/com/example/Sudoku/ScoreView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/Sudoku/SudokuGrid.java" afterPath="$PROJECT_DIR$/src/com/example/Sudoku/SudokuGrid.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/Sudoku/SudokuMain.java" afterPath="$PROJECT_DIR$/src/com/example/Sudoku/SudokuMain.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/Sudoku/SudokuPlay.java" afterPath="$PROJECT_DIR$/src/com/example/Sudoku/SudokuPlay.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/Sudoku/SudokuView.java" afterPath="$PROJECT_DIR$/src/com/example/Sudoku/SudokuView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/menu/menugame.xml" afterPath="$PROJECT_DIR$/res/menu/menugame.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/score.xml" afterPath="$PROJECT_DIR$/res/layout/score.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Sudoku.iws" />
@@ -92,67 +107,26 @@
       <file leaf-file-name="SudokuMain.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/Sudoku/SudokuMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="22" selection-start="895" selection-end="895" vertical-scroll-proportion="0.0" vertical-offset="5" max-vertical-offset="1139">
+            <state line="67" column="60" selection-start="1811" selection-end="1811" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="1190">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScoreView.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ScoreView.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/Sudoku/ScoreView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="1" selection-start="314" selection-end="314" vertical-scroll-proportion="0.43776825" vertical-offset="0" max-vertical-offset="466">
+            <state line="36" column="29" selection-start="836" selection-end="836" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SudokuPlay.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="SudokuPlay.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/Sudoku/SudokuPlay.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="124" column="16" selection-start="3784" selection-end="3784" vertical-scroll-proportion="0.0" vertical-offset="1234" max-vertical-offset="2125">
-              <folding>
-                <element signature="e#1814#1973#0" expanded="true" />
-                <element signature="e#1968#1969#0" expanded="true" />
-                <element signature="e#2003#2146#0" expanded="true" />
-                <element signature="e#2141#2142#0" expanded="true" />
-                <element signature="e#3440#3872#0" expanded="true" />
-                <element signature="e#3861#3862#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SudokuView.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/Sudoku/SudokuView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="19" selection-start="2561" selection-end="2561" vertical-scroll-proportion="0.0" vertical-offset="928" max-vertical-offset="3502">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatabaseHandler.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/Sudoku/db/DatabaseHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="45" selection-start="655" selection-end="655" vertical-scroll-proportion="0.0" vertical-offset="231" max-vertical-offset="697">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScoreDB.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/example/Sudoku/db/ScoreDB.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="26" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1445">
-              <folding>
-                <element signature="e#1076#1077#0" expanded="true" />
-                <element signature="e#1102#1103#0" expanded="true" />
-              </folding>
+            <state line="133" column="27" selection-start="4037" selection-end="4037" vertical-scroll-proportion="0.32386363" vertical-offset="1625" max-vertical-offset="2363">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -175,7 +149,6 @@
         <option value="$PROJECT_DIR$/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/res/menu/menu.xml" />
         <option value="$PROJECT_DIR$/res/drawable-hdpi/buttonBackgrounds.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/Sudoku/SudokuMain.java" />
         <option value="$PROJECT_DIR$/res/layout/play.xml" />
         <option value="$PROJECT_DIR$/src/com/example/Sudoku/keyboard_button.xml" />
         <option value="$PROJECT_DIR$/res/layout/custum_button.xml" />
@@ -186,21 +159,27 @@
         <option value="$PROJECT_DIR$/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/res/menu/menugame.xml" />
-        <option value="$PROJECT_DIR$/src/com/example/Sudoku/ChronoHandler.java" />
         <option value="$PROJECT_DIR$/src/com/example/Sudoku/SudokuView.java" />
-        <option value="$PROJECT_DIR$/src/com/example/Sudoku/SudokuPlay.java" />
-        <option value="$PROJECT_DIR$/src/com/example/Sudoku/db/DatabaseHandler.java" />
         <option value="$PROJECT_DIR$/src/com/example/Sudoku/HighScore.java" />
         <option value="$PROJECT_DIR$/src/com/example/Sudoku/db/HighScoreDB.java" />
+        <option value="$PROJECT_DIR$/res/layout/score.xml" />
+        <option value="$PROJECT_DIR$/src/com/example/Sudoku/SudokuMain.java" />
+        <option value="$PROJECT_DIR$/res/layout/scoreitem.xml" />
         <option value="$PROJECT_DIR$/src/com/example/Sudoku/db/ScoreDB.java" />
+        <option value="$PROJECT_DIR$/src/com/example/Sudoku/db/HighScore.java" />
+        <option value="$PROJECT_DIR$/src/com/example/Sudoku/db/DatabaseHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/example/Sudoku/ScoreView.java" />
+        <option value="$PROJECT_DIR$/src/com/example/Sudoku/SudokuGrid.java" />
+        <option value="$PROJECT_DIR$/src/com/example/Sudoku/ChronoHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/example/Sudoku/SudokuPlay.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="754" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -228,21 +207,12 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="Sudoku" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Android API 15 Platform &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -327,9 +297,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sudoku" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sudoku" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -341,7 +330,7 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="preferences.sourceCode" />
+    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -637,6 +626,7 @@
       <workItem from="1393761206022" duration="26327000" />
       <workItem from="1393876264338" duration="10172000" />
       <workItem from="1393938411466" duration="6509000" />
+      <workItem from="1393965625128" duration="6822000" />
     </task>
     <task id="LOCAL-00001" summary="Grille drawn">
       <created>1393792319924</created>
@@ -654,19 +644,19 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43008000" />
+    <option name="totallyTimeSpent" value="49830000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27452415" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27447918" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.084895834" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39937434" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -675,15 +665,15 @@
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22874807" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23956724" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22836287" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23879041" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14568081" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1282844" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1453125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1282586" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -718,6 +708,48 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/example/Sudoku/SudokuMain.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="22" selection-start="895" selection-end="895" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1258">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/Sudoku/ScoreView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="1" selection-start="314" selection-end="314" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="306">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/Sudoku/SudokuPlay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="124" column="16" selection-start="3784" selection-end="3784" vertical-scroll-proportion="0.0" vertical-offset="2108" max-vertical-offset="2329">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/Sudoku/SudokuView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="19" selection-start="2561" selection-end="2561" vertical-scroll-proportion="0.0" vertical-offset="1190" max-vertical-offset="3570">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/Sudoku/db/DatabaseHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="45" selection-start="655" selection-end="655" vertical-scroll-proportion="0.0" vertical-offset="231" max-vertical-offset="697">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/Sudoku/db/ScoreDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="26" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="1445">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/Sudoku/SudokuMain.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="34" selection-start="697" selection-end="697" vertical-scroll-proportion="0.0" vertical-offset="25" max-vertical-offset="1258">
           <folding />
         </state>
@@ -726,14 +758,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/example/Sudoku/SudokuPlay.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="73" column="40" selection-start="2074" selection-end="2074" vertical-scroll-proportion="0.0" vertical-offset="1241" max-vertical-offset="1411">
-          <folding>
-            <element signature="e#1814#1973#0" expanded="true" />
-            <element signature="e#1968#1969#0" expanded="true" />
-            <element signature="e#2003#2146#0" expanded="true" />
-            <element signature="e#2141#2142#0" expanded="true" />
-            <element signature="e#3440#3872#0" expanded="true" />
-            <element signature="e#3861#3862#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -741,7 +766,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="62" selection-start="160" selection-end="165" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="170">
           <folding>
-            <element signature="e#154#169#0" expanded="true" />
+            <element signature="e#154#169#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -750,7 +775,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="5" selection-start="563" selection-end="563" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="578">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -758,23 +783,14 @@
     <entry file="file://$PROJECT_DIR$/src/com/example/Sudoku/SudokuPlay.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="64" column="1" selection-start="1848" selection-end="1848" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1190">
-          <folding>
-            <element signature="e#1814#1973#0" expanded="true" />
-            <element signature="e#1968#1969#0" expanded="true" />
-            <element signature="e#2003#2146#0" expanded="true" />
-            <element signature="e#2141#2142#0" expanded="true" />
-            <element signature="e#3440#3872#0" expanded="true" />
-            <element signature="e#3861#3862#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/Sudoku/SudokuView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="54" column="41" selection-start="1475" selection-end="1475" vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="1734">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -839,13 +855,6 @@
     <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/buttonbackgrounds.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="6" selection-start="151" selection-end="151" vertical-scroll-proportion="0.036441587" vertical-offset="0" max-vertical-offset="933" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/Sudoku/SudokuGrid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="4" selection-start="620" selection-end="620" vertical-scroll-proportion="0.10718114" vertical-offset="291" max-vertical-offset="3519">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
@@ -928,16 +937,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="65" selection-start="171" selection-end="171" vertical-scroll-proportion="0.11409396" vertical-offset="0" max-vertical-offset="447">
           <folding>
-            <element signature="e#154#169#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/Sudoku/ChronoHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="14" selection-start="549" selection-end="549" vertical-scroll-proportion="0.39484978" vertical-offset="207" max-vertical-offset="680">
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#154#169#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -946,74 +946,97 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="66" selection-start="105" selection-end="174" vertical-scroll-proportion="0.038548753" vertical-offset="0" max-vertical-offset="441">
           <folding>
-            <element signature="e#151#166#0" expanded="true" />
-            <element signature="e#225#245#0" expanded="true" />
-            <element signature="e#302#316#0" expanded="true" />
-            <element signature="e#367#383#0" expanded="true" />
-            <element signature="e#432#446#0" expanded="true" />
+            <element signature="e#151#166#0" expanded="false" />
+            <element signature="e#225#245#0" expanded="false" />
+            <element signature="e#302#316#0" expanded="false" />
+            <element signature="e#367#383#0" expanded="false" />
+            <element signature="e#432#446#0" expanded="false" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/scoreitem.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="9" selection-start="235" selection-end="235" vertical-scroll-proportion="0.12518409" vertical-offset="0" max-vertical-offset="679">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/score.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="38" selection-start="274" selection-end="274" vertical-scroll-proportion="0.20029455" vertical-offset="0" max-vertical-offset="679">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/Sudoku/db/HighScore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="24" selection-start="314" selection-end="314" vertical-scroll-proportion="0.5107296" vertical-offset="34" max-vertical-offset="629">
+        <state line="31" column="30" selection-start="532" selection-end="532" vertical-scroll-proportion="0.45551983" vertical-offset="0" max-vertical-offset="933">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/Sudoku/db/DatabaseHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="45" selection-start="655" selection-end="655" vertical-scroll-proportion="0.0" vertical-offset="231" max-vertical-offset="697">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/Sudoku/db/ScoreDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="26" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1462">
-          <folding>
-            <element signature="e#1076#1077#0" expanded="true" />
-            <element signature="e#1102#1103#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/Sudoku/SudokuPlay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="16" selection-start="3784" selection-end="3784" vertical-scroll-proportion="0.0" vertical-offset="1489" max-vertical-offset="2125">
-          <folding>
-            <element signature="e#1814#1973#0" expanded="true" />
-            <element signature="e#1968#1969#0" expanded="true" />
-            <element signature="e#2003#2146#0" expanded="true" />
-            <element signature="e#2141#2142#0" expanded="true" />
-            <element signature="e#3440#3872#0" expanded="true" />
-            <element signature="e#3861#3862#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/Sudoku/SudokuView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="19" selection-start="2561" selection-end="2561" vertical-scroll-proportion="0.0" vertical-offset="928" max-vertical-offset="3502">
+        <state line="28" column="38" selection-start="842" selection-end="842" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1768">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1410#1435#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/Sudoku/SudokuMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="22" selection-start="895" selection-end="895" vertical-scroll-proportion="0.0" vertical-offset="5" max-vertical-offset="1139">
+        <state line="67" column="60" selection-start="1811" selection-end="1811" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="1190">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/Sudoku/ScoreView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="1" selection-start="314" selection-end="314" vertical-scroll-proportion="0.43776825" vertical-offset="0" max-vertical-offset="466">
+        <state line="36" column="29" selection-start="836" selection-end="836" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/Sudoku/SudokuGrid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="81" selection-start="1865" selection-end="1865" vertical-scroll-proportion="0.34801137" vertical-offset="724" max-vertical-offset="3570">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/Sudoku/SudokuView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="26" selection-start="3907" selection-end="3907" vertical-scroll-proportion="0.82102275" vertical-offset="1071" max-vertical-offset="3400">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/Sudoku/db/DatabaseHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="83" selection-start="1246" selection-end="1246" vertical-scroll-proportion="0.6761364" vertical-offset="0" max-vertical-offset="704">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/Sudoku/ChronoHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="0" selection-start="755" selection-end="755" vertical-scroll-proportion="0.70028406" vertical-offset="0" max-vertical-offset="704">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/Sudoku/SudokuPlay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="133" column="27" selection-start="4037" selection-end="4037" vertical-scroll-proportion="0.32386363" vertical-offset="1625" max-vertical-offset="2363">
           <folding />
         </state>
       </provider>

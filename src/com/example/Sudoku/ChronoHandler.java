@@ -27,8 +27,7 @@ public class ChronoHandler {
 		}
 	}
 
-	public String getTotal(){
-        DecimalFormat formatter = new DecimalFormat("#,###.0");
-		return formatter.format((totalTime + (System.currentTimeMillis() - startTime))/1000.0);
+	public long getTotal(){
+		return (totalTime + (System.currentTimeMillis() - startTime))/1000;
 	}
 }
