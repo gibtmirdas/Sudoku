@@ -39,9 +39,14 @@ public class SudokuView extends View {
         int strokeRayon = 5;
         if (viewHeight > viewWidth)
             delta = viewWidth;
-        else
+		else
             delta = viewHeight;
         delta = (delta - 2 * xOffset) / 9;
+		if (viewHeight > viewWidth)
+			yOffset = (viewHeight /2) - ((9*delta)/2);
+		else
+			xOffset = (viewWidth /2) - ((9*delta)/2);
+
 
         charPaint.setTextSize(50);
         charOld.setTextSize(50);
@@ -158,7 +163,7 @@ public class SudokuView extends View {
             Log.d("LogCat", "currentChoose : " + currentChoose.x + "-" + currentChoose.y);
         }
         if (grid.isFinished()) {
-
+			play.gameWon();
         }
     }
 

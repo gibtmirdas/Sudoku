@@ -8,7 +8,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import com.example.Sudoku.db.HighScore;
 
 public class SudokuMain extends Activity implements View.OnClickListener{
 	private Menu m = null;
@@ -64,6 +63,7 @@ public class SudokuMain extends Activity implements View.OnClickListener{
 			Intent i = new Intent(SudokuMain.this, SudokuPlay.class);
 			i.putExtra("difficulty", difficulty);
 			startActivity(i);
+			finish();
 		}else if(v.getId() == R.id.ButtHighScore){
 			Intent i = new Intent(SudokuMain.this, ScoreView.class);
 			startActivity(i);

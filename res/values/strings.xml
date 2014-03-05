@@ -17,4 +17,10 @@
 	<string name="pause">Pause game</string>
 	<string name="unpause">Unpause game</string>
 
+	<!-- Score view -->
+	<string name="emptyScore">No HighScore yet !</string>
+	<string name="resetScore">Reset Scores</string>
+
+
+
 </resources>

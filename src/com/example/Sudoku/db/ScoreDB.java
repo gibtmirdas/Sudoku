@@ -14,7 +14,7 @@ import java.util.HashMap;
 public class ScoreDB {
 
     private static final int VERSION_BDD = 1;
-    private static final String NOM_BDD = "scores.db";
+    private static final String NOM_BDD = "sudoku.db";
 
     private static final String TABLE_SCORE = "table_scores";
     private static final String COL_ID = "ID";
@@ -45,10 +45,12 @@ public class ScoreDB {
     }
 
 	public ArrayList<HashMap<String, String>> getAllScores(){
-		Cursor c = bdd.query(TABLE_SCORE, new String[]{COL_ID, COL_SCORE, COL_USERNAME}, null, null, null, null, COL_SCORE + " DESC");
+		Cursor c = bdd.query(TABLE_SCORE, new String[]{COL_ID, COL_SCORE, COL_USERNAME}, null, null, null, null, COL_SCORE );
 		ArrayList<HashMap<String, String>> listItems = new ArrayList<HashMap<String, String>>();
 		HashMap<String, String> map ;
 		c.moveToFirst();
+		if(c.getCount() == 0)
+			return listItems;
 		do{
 			HighScore hs = new HighScore();
 			hs.setId(c.getInt(NUM_COL_ID));
@@ -76,9 +78,13 @@ public class ScoreDB {
         return bdd.update(TABLE_SCORE, values, COL_ID + " = " +id, null);
     }
 
-    public int removeScoreWithID(int id){
-        return bdd.delete(TABLE_SCORE, COL_ID + " = " +id, null);
-    }
+	public int removeScoreWithID(int id){
+		return bdd.delete(TABLE_SCORE, COL_ID + " = " +id, null);
+	}
+
+	public int removeScoreAll(){
+		return bdd.delete(TABLE_SCORE, null, null);
+	}
 
     public HighScore getScoreWithUsername(String username){
         Cursor c = bdd.query(TABLE_SCORE, new String[] {COL_ID, COL_SCORE, COL_USERNAME}, COL_USERNAME + " LIKE \"" + username +"\"", null, null, null, null);

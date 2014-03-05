@@ -10,5 +10,15 @@
 			android:layout_width="fill_parent"
 			android:layout_height="fill_parent"
 			/>
+	<TextView
+			android:id="@+id/emptyScore"
+			android:text="@string/emptyScore"
+			android:textSize="40dp"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:visibility="visible"
+			/>
+
+
 
 </LinearLayout>

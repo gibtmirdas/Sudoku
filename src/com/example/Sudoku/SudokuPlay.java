@@ -6,6 +6,7 @@ import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.drm.DrmStore;
 import android.os.Bundle;
 import android.os.Message;
 import android.util.Log;
@@ -14,6 +15,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.NumberPicker;
+import com.example.Sudoku.db.HighScore;
+import com.example.Sudoku.db.ScoreDB;
 
 /**
  * Created by gibtmirdas on 02/03/14.
@@ -131,31 +134,57 @@ public class SudokuPlay extends Activity {
         dial.show();
     }
 
-	private void gameWon(){
+	public void gameWon(){
 
 		// TODO when game won => prompt alert and ask user to set username for highScore
 		String username;
 		float time;
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		builder.setTitle("Win !");
-		builder.setMessage("You won the game\nCurrent time:" + handler.getTotal()+ "s");
+		builder.setMessage("You won the game\nCurrent time: " + handler.getTotal()+ " s");
 		
 		final EditText input = new EditText(this);
 		builder.setView(input);
 
-		builder.setPositiveButton("Unpause",new DialogInterface.OnClickListener() {
+		builder.setPositiveButton("Save score",new DialogInterface.OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
-				msgB.clear();
-				msgB.putBoolean("pause", false);
-				msg.setData(msgB);
-				handler.handleMessage(msg);
-				view.setPaused(false);
-				setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
+				String username = input.getText().toString();
+				if(username == null || username.equals(""))
+					gameWon();
+				else{
+					HighScore hs = new HighScore(handler.getTotal(),username );
+					saveScore(hs);
+					Intent i = new Intent(getApplicationContext(), SudokuMain.class);
+					startActivity(i);
+					finish();
+				}
+			}
+		});
+		builder.setNegativeButton("Cancel",new DialogInterface.OnClickListener(){
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				Intent i = new Intent(getApplicationContext(), SudokuMain.class);
+				startActivity(i);
+				finish();
 			}
 		});
 		AlertDialog dial = builder.create();
 		dial.setCancelable(false);
 		dial.show();
+	}
+
+	private void saveScore(HighScore hs){
+		ScoreDB db = new ScoreDB(getApplicationContext());
+		db.open();
+		db.insertScore(hs);
+		db.close();
+	}
+
+	@Override
+	public void onBackPressed() {
+		Intent i = new Intent(this, SudokuMain.class);
+		startActivity(i);
+		finish();
 	}
 }
