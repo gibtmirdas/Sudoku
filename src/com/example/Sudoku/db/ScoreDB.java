@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.provider.ContactsContract;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -13,7 +14,6 @@ import java.util.HashMap;
  */
 public class ScoreDB {
 
-    private static final int VERSION_BDD = 1;
     private static final String NOM_BDD = "sudoku.db";
 
     private static final String TABLE_SCORE = "table_scores";
@@ -29,7 +29,7 @@ public class ScoreDB {
     private DatabaseHandler dbHandler;
 
     public ScoreDB(Context context){
-        dbHandler = new DatabaseHandler(context, NOM_BDD, null, VERSION_BDD);
+        dbHandler = new DatabaseHandler(context, NOM_BDD, null, DatabaseHandler.VERSION);
     }
 
     public void open(){

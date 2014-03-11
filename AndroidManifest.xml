@@ -14,5 +14,7 @@
         </activity>
 		<activity android:name=".SudokuPlay"/>
         <activity android:name=".ScoreView"/>
-    </application>
+		<activity android:name=".SudokuGrids"/>
+		<activity android:name=".AndroidExplorer"/>
+	</application>
 </manifest>

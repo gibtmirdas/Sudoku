@@ -53,6 +53,9 @@ public class SudokuMain extends Activity implements View.OnClickListener{
 			case R.id.hard:
 				difficulty = 2;
 				return true;
+			case R.id.grids:
+				Intent i = new Intent(getApplicationContext(), SudokuGrids.class);
+				startActivity(i);
 		}
 		return super.onOptionsItemSelected(item);
 	}

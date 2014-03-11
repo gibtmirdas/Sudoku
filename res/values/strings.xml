@@ -8,6 +8,7 @@
 
 	<!-- menu -->
 	<string name="about">About</string>
+	<string name="grid">Grids</string>
 	<string name="difficulty">Difficulty</string>
 	<string name="easy">Easy</string>
 	<string name="medium">Medium</string>
@@ -20,6 +21,10 @@
 	<!-- Score view -->
 	<string name="emptyScore">No HighScore yet !</string>
 	<string name="resetScore">Reset Scores</string>
+
+	<!-- grids view -->
+	<string name="empty_grid">No imported grids yet !</string>
+	<string name="import_grid">Import grid</string>
 
 
 
