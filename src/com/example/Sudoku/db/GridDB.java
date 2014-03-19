@@ -46,7 +46,7 @@ public class GridDB {
     }
 
 	public ArrayList<HashMap<String, String>> getAllGrides(){
-		Cursor c = bdd.query(TABLE_GRID, new String[]{COL_ID, COL_GRID, COL_DIFFICULTY}, null, null, null, null, COL_GRID);
+		Cursor c = bdd.query(TABLE_GRID, new String[]{COL_ID, COL_GRID, COL_DIFFICULTY}, null, null, null, null, COL_ID);
 		ArrayList<HashMap<String, String>> listItems = new ArrayList<HashMap<String, String>>();
 		HashMap<String, String> map ;
 		c.moveToFirst();
@@ -58,6 +58,7 @@ public class GridDB {
 			hs.setGrid(c.getString(NUM_COL_GRID));
 			hs.setDifficulty(c.getInt(NUM_COL_DIFFICULTY));
 			map = new HashMap<String, String>();
+			map.put("ID", ""+hs.getId());
 			map.put("grid", hs.getGrid());
 			map.put("difficulty", ""+hs.getDifficulty());
 			listItems.add(map);
@@ -88,7 +89,7 @@ public class GridDB {
 	}
 
     public Grid getGrid(int id){
-        Cursor c = bdd.query(TABLE_GRID, new String[] {COL_ID, COL_GRID, COL_DIFFICULTY}, COL_GRID + " = \"" + id +"\"", null, null, null, null);
+        Cursor c = bdd.query(TABLE_GRID, new String[] {COL_ID, COL_GRID, COL_DIFFICULTY}, COL_ID + " = \"" + id +"\"", null, null, null, null);
         return cursorToScore(c);
     }
 

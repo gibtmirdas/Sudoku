@@ -8,10 +8,12 @@ public class HighScore {
     private int id;
     private float score;
     private String userName;
+	private int difficulty;
 
-    public HighScore(float score, String userName) {
+    public HighScore(float score, String userName, int difficulty) {
         this.score = score;
         this.userName = userName;
+		this.difficulty = difficulty;
     }
 
     public HighScore() {
@@ -40,4 +42,12 @@ public class HighScore {
     public void setUserName(String userName) {
         this.userName = userName;
     }
+
+	public int getDifficulty() {
+		return difficulty;
+	}
+
+	public void setDifficulty(int difficulty) {
+		this.difficulty = difficulty;
+	}
 }

@@ -21,8 +21,10 @@ public class ScoreDB {
     private static final int NUM_COL_ID = 0;
     private static final String COL_SCORE = "score";
     private static final int NUM_COL_SCORE = 1;
-    private static final String COL_USERNAME = "username";
-    private static final int NUM_COL_USERNAME = 2;
+	private static final String COL_USERNAME = "username";
+	private static final int NUM_COL_USERNAME = 2;
+	private static final String COL_DIFFICULTY = "difficulty";
+	private static final int NUM_COL_DIFFICULTY = 3;
 
     private SQLiteDatabase bdd;
 
@@ -45,7 +47,7 @@ public class ScoreDB {
     }
 
 	public ArrayList<HashMap<String, String>> getAllScores(){
-		Cursor c = bdd.query(TABLE_SCORE, new String[]{COL_ID, COL_SCORE, COL_USERNAME}, null, null, null, null, COL_SCORE );
+		Cursor c = bdd.query(TABLE_SCORE, new String[]{COL_ID, COL_SCORE, COL_USERNAME, COL_DIFFICULTY}, null, null, null, null, COL_SCORE );
 		ArrayList<HashMap<String, String>> listItems = new ArrayList<HashMap<String, String>>();
 		HashMap<String, String> map ;
 		c.moveToFirst();
@@ -56,9 +58,11 @@ public class ScoreDB {
 			hs.setId(c.getInt(NUM_COL_ID));
 			hs.setScore(c.getInt(NUM_COL_SCORE));
 			hs.setUserName(c.getString(NUM_COL_USERNAME));
+			hs.setDifficulty(c.getInt(NUM_COL_DIFFICULTY));
 			map = new HashMap<String, String>();
 			map.put("username", hs.getUserName());
 			map.put("score", ""+hs.getScore());
+			map.put("difficulty", ""+hs.getDifficulty());
 			listItems.add(map);
 		}while(c.moveToNext());
 		return listItems;
@@ -67,29 +71,14 @@ public class ScoreDB {
     public long insertScore(HighScore hs){
         ContentValues values = new ContentValues();
         values.put(COL_SCORE, hs.getScore());
-        values.put(COL_USERNAME, hs.getUserName());
+		values.put(COL_USERNAME, hs.getUserName());
+		values.put(COL_DIFFICULTY, hs.getDifficulty());
         return bdd.insert(TABLE_SCORE, null, values);
     }
-
-    public int updateScore(int id, HighScore hs){
-        ContentValues values = new ContentValues();
-        values.put(COL_SCORE, hs.getScore());
-        values.put(COL_USERNAME, hs.getUserName());
-        return bdd.update(TABLE_SCORE, values, COL_ID + " = " +id, null);
-    }
-
-	public int removeScoreWithID(int id){
-		return bdd.delete(TABLE_SCORE, COL_ID + " = " +id, null);
-	}
 
 	public int removeScoreAll(){
 		return bdd.delete(TABLE_SCORE, null, null);
 	}
-
-    public HighScore getScoreWithUsername(String username){
-        Cursor c = bdd.query(TABLE_SCORE, new String[] {COL_ID, COL_SCORE, COL_USERNAME}, COL_USERNAME + " LIKE \"" + username +"\"", null, null, null, null);
-        return cursorToScore(c);
-    }
 
     private HighScore cursorToScore(Cursor c){
         if (c.getCount() == 0)
@@ -99,7 +88,8 @@ public class ScoreDB {
         HighScore score = new HighScore();
         score.setId(c.getInt(NUM_COL_ID));
         score.setScore(c.getInt(NUM_COL_SCORE));
-        score.setUserName(c.getString(NUM_COL_USERNAME));
+		score.setUserName(c.getString(NUM_COL_USERNAME));
+		score.setDifficulty(c.getInt(NUM_COL_DIFFICULTY));
         c.close();
         return score;
     }

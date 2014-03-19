@@ -76,6 +76,27 @@ public class SudokuGrid{
 			break;
 		}
 	}
+
+	public SudokuGrid(String content){
+		enteredNumbers = 0;
+		grid = new int[9][9];
+		isSetAtFirst = new boolean[9][9];
+		lines = new ArrayList<ArrayList<Integer>>(9);
+		columns = new ArrayList<ArrayList<Integer>>(9);
+		squares = new ArrayList<ArrayList<Integer>>(9);
+		for (int i = 0; i < 9; i++) {
+			lines.add(new ArrayList<Integer>(9));
+			columns.add(new ArrayList<Integer>(9));
+			squares.add(new ArrayList<Integer>(9));
+		}
+
+		for (int i = 0; i < 9; i++) {
+			for (int j = 0; j < 9; j++) {
+				grid[i][j] = Integer.parseInt(""+content.charAt((i*9)+j));
+			}
+		}
+		setAttributesFromGrid();
+	}
 	
 	/**
 	 * Method to be called when the grid difficulty is selected (after grid 

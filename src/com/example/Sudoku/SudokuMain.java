@@ -8,17 +8,19 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
-public class SudokuMain extends Activity implements View.OnClickListener{
+public class SudokuMain extends Activity implements View.OnClickListener {
 	private Menu m = null;
 	private int difficulty = 0;
-    /**
-     * Called when the activity is first created.
-     */
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+
+	/**
+	 * Called when the activity is first created.
+	 */
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.main);
 		Button buttHigh = (Button) findViewById(R.id.ButtHighScore);
 		Button buttStart = (Button) findViewById(R.id.ButtStart);
 		// Set Background
@@ -28,11 +30,10 @@ public class SudokuMain extends Activity implements View.OnClickListener{
 		// Set actions
 		buttHigh.setOnClickListener(this);
 		buttStart.setOnClickListener(this);
-    }
+	}
 
 	@Override
-	public boolean onCreateOptionsMenu(Menu menu)
-	{
+	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.menu, menu);
 		m = menu;
@@ -40,10 +41,8 @@ public class SudokuMain extends Activity implements View.OnClickListener{
 	}
 
 	@Override
-	public boolean onOptionsItemSelected (MenuItem item)
-	{
-		switch(item.getItemId())
-		{
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
 			case R.id.easy:
 				difficulty = 0;
 				return true;
@@ -56,18 +55,24 @@ public class SudokuMain extends Activity implements View.OnClickListener{
 			case R.id.grids:
 				Intent i = new Intent(getApplicationContext(), SudokuGrids.class);
 				startActivity(i);
+				break;
+			case R.id.about:
+				Toast.makeText(getApplicationContext(),
+						"Action not supported yet", Toast.LENGTH_LONG)
+						.show();
+				break;
 		}
 		return super.onOptionsItemSelected(item);
 	}
 
 	@Override
 	public void onClick(View v) {
-		if(v.getId() == R.id.ButtStart){
+		if (v.getId() == R.id.ButtStart) {
 			Intent i = new Intent(SudokuMain.this, SudokuPlay.class);
 			i.putExtra("difficulty", difficulty);
 			startActivity(i);
 			finish();
-		}else if(v.getId() == R.id.ButtHighScore){
+		} else if (v.getId() == R.id.ButtHighScore) {
 			Intent i = new Intent(SudokuMain.this, ScoreView.class);
 			startActivity(i);
 		}

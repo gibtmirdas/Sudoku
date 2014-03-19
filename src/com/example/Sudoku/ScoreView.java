@@ -16,6 +16,7 @@ import com.example.Sudoku.db.ScoreDB;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by thomas on 04/03/14.
@@ -56,9 +57,14 @@ public class ScoreView extends Activity {
 			ListView list = (ListView) findViewById(R.id.listScore);
 			list.setEmptyView(txt);
 		}else{
+			// add header to list
+			HashMap<String, String> header = new HashMap<String, String>();
+			header.put("username","username");
+			header.put("score","score");
+			header.put("difficulty","difficulty");
+			listItem.add(0,header);
 			SimpleAdapter mSchedule = new SimpleAdapter(this.getBaseContext(), listItem, R.layout.scoreitem,
-					new String[]{"username", "score"}, new int[]{R.id.username, R.id.score});
-
+					new String[]{"username", "score", "difficulty"}, new int[]{R.id.username, R.id.score, R.id.difficulty_hs});
 			listScore.setAdapter(mSchedule);
 		}
 	}

@@ -41,7 +41,7 @@ public class SudokuView extends View {
             delta = viewWidth;
 		else
             delta = viewHeight;
-        delta = (delta - 2 * xOffset) / 9;
+        delta = (delta - 2 * 10) / 9;
 		if (viewHeight > viewWidth)
 			yOffset = (viewHeight /2) - ((9*delta)/2);
 		else
@@ -87,7 +87,6 @@ public class SudokuView extends View {
                 }
             }
         }
-        Log.d("LogCat", "PAINT");
     }
 
     @Override
@@ -95,11 +94,10 @@ public class SudokuView extends View {
         super.onSizeChanged(w, h, oldw, oldh);
         viewWidth = w;
         viewHeight = h;
-        Log.d("LogCat", "onSizeChanged : Width:" + w + "--Height:" + h);
     }
 
 	/* **********************************************
-     * 				 Mange Selection				*
+     * 				 Manage Selection				*
 	 ***********************************************/
 
     @Override
@@ -111,6 +109,12 @@ public class SudokuView extends View {
         return true;
     }
 
+	/**
+	 * Manage non-tactile devices, using pad
+	 * @param keyCode
+	 * @param event
+	 * @return
+	 */
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         switch (keyCode) {
@@ -160,7 +164,6 @@ public class SudokuView extends View {
                 updateValue(value, x, y);
             }
             this.invalidate();
-            Log.d("LogCat", "currentChoose : " + currentChoose.x + "-" + currentChoose.y);
         }
         if (grid.isFinished()) {
 			play.gameWon();
@@ -194,8 +197,8 @@ public class SudokuView extends View {
     }
 
     public void setPickedValue(int pickedValue) {
-        Log.d("LogCat", "Picked value :" + pickedValue);
-        played(pickedValue, currentChoose.x, currentChoose.y);
+		if(pickedValue>0)
+        	played(pickedValue, currentChoose.x, currentChoose.y);
     }
 
     public boolean isPaused() {

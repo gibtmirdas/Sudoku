@@ -6,7 +6,9 @@ package com.example.Sudoku;
  */
 
 
+import android.content.Intent;
 import android.os.Bundle;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,6 +27,7 @@ public class AndroidExplorer extends ListActivity {
 	private List<String> path = null;
 	private String root = "/";
 	private TextView myPath;
+	private File file;
 
 	/**
 	 * Called when the activity is first created.
@@ -68,7 +71,7 @@ public class AndroidExplorer extends ListActivity {
 
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
-		File file = new File(path.get(position));
+		file = new File(path.get(position));
 		if (file.isDirectory()) {
 			if (file.canRead())
 				getDir(path.get(position));
@@ -93,12 +96,19 @@ public class AndroidExplorer extends ListActivity {
 
 								@Override
 								public void onClick(DialogInterface dialog, int which) {
-									// TODO Auto-generated method stub
+									sendResult();
 								}
 							}).show();
 
 		}
 
+	}
+
+	private void sendResult() {
+		Intent i = new Intent();
+		i.putExtra("path", file.getAbsolutePath());
+		setResult(RESULT_OK,i);
+		finish();
 	}
 
 }
