@@ -96,7 +96,7 @@ public class SudokuPlay extends Activity {
 		switch (item.getItemId()) {
 			// Game paused
 			case R.id.pause:
-				setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
+				//setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_NOSENSOR);
 				dialogPause();
 				sendPause(true);
 				view.setPaused(true);
@@ -114,7 +114,7 @@ public class SudokuPlay extends Activity {
 			public void onClick(DialogInterface dialog, int which) {
 				sendPause(false);
 				view.setPaused(false);
-				setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
+				//setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
 			}
 		});
 		AlertDialog dial = builder.create();

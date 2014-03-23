@@ -1,6 +1,7 @@
 package com.example.Sudoku;
 
 import android.content.Context;
+import android.content.res.Configuration;
 import android.graphics.*;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -42,10 +43,13 @@ public class SudokuView extends View {
 		else
             delta = viewHeight;
         delta = (delta - 2 * 10) / 9;
-		if (viewHeight > viewWidth)
+		if (viewHeight > viewWidth){
+            xOffset = 10;
 			yOffset = (viewHeight /2) - ((9*delta)/2);
-		else
+        }else{
 			xOffset = (viewWidth /2) - ((9*delta)/2);
+            yOffset = 10;
+        }
 
 
         charPaint.setTextSize(50);
@@ -96,7 +100,7 @@ public class SudokuView extends View {
         viewHeight = h;
     }
 
-	/* **********************************************
+    /* **********************************************
      * 				 Manage Selection				*
 	 ***********************************************/
 
